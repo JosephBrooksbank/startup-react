@@ -1,9 +1,16 @@
 import {ReactNode} from "react";
 
-export const Card = ({children}: {children: ReactNode}) => {
+interface CardProps {
+    children: ReactNode;
+    className?: string;
+}
+export const Card = ({children, className}: CardProps) => {
+    console.log( className)
     return (
-        <div className={"bg-gray-700 p-4 rounded-md shadow-md"}>
-            {children}
+        <div className={"bg-gray-600 rounded-md"}>
+            <div className={"p-4 rounded-md shadow-lg " + className ?? " bg-gray-600"}>
+                {children}
+            </div>
         </div>
     )
 }

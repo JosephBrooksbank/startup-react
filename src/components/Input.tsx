@@ -12,7 +12,6 @@ export const Input = ({width, onSubmit, className, ...props}: InputProps) => {
     }
 
     className = (className) + ` p-1 bg-gray-900 rounded-md ${width ?? ""}`;
-    console.log(className)
     return (
         <form onSubmit={onFormSubmit}>
             <input
